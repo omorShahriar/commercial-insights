@@ -1,0 +1,34 @@
+<svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="100"
+      height="100"
+      fill="none"
+      viewBox="0 0 100 100"
+    >
+      <g fill="#FEEFEF">
+        <g>
+          <circle cx="8.039" cy="8.039" r="8.039"></circle>
+          <circle cx="8.039" cy="36.175" r="8.039"></circle>
+          <circle cx="8.039" cy="64.311" r="8.039"></circle>
+          <circle cx="8.039" cy="91.945" r="8.039"></circle>
+        </g>
+        <g>
+          <circle cx="36.678" cy="36.175" r="8.039"></circle>
+          <circle cx="36.678" cy="63.306" r="8.039"></circle>
+          <circle cx="36.678" cy="92.699" r="8.039"></circle>
+          <circle cx="36.678" cy="9.044" r="8.039"></circle>
+        </g>
+        <g>
+          <circle cx="65.316" cy="36.175" r="8.039"></circle>
+          <circle cx="65.317" cy="63.306" r="8.039"></circle>
+          <circle cx="65.316" cy="90.438" r="8.039"></circle>
+          <circle cx="65.316" cy="9.044" r="8.039"></circle>
+        </g>
+        <g>
+          <circle cx="93.955" cy="36.175" r="8.039"></circle>
+          <circle cx="93.955" cy="63.307" r="8.039"></circle>
+          <circle cx="93.955" cy="91.192" r="8.039"></circle>
+          <circle cx="93.955" cy="9.044" r="8.039"></circle>
+        </g>
+      </g>
+    </svg>
