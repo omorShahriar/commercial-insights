@@ -24,7 +24,9 @@ const ptComponents = {
   },
 };
 
-const Post = ({ post }) => {
+const Post = ({
+  post = { title: "", name: "", categories: "", authorImage: "", body: [] },
+}) => {
   const {
     title = "Missing title",
     name = "Missing name",
@@ -80,6 +82,8 @@ export async function getStaticProps(context) {
   const { slug = "" } = context.params;
   const post = await client.fetch(query, { slug });
   return {
+    notFound: true,
+    revalidate: 300,
     props: {
       post,
     },
