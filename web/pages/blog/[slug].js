@@ -73,7 +73,7 @@ export async function getStaticPaths() {
 
   return {
     paths: paths.map((slug) => ({ params: { slug } })),
-    fallback: true,
+    fallback: "blocking",
   };
 }
 
@@ -83,7 +83,7 @@ export async function getStaticProps(context) {
   const post = await client.fetch(query, { slug });
   return {
     notFound: true,
-    revalidate: 300,
+    revalidate: 10,
     props: {
       post,
     },
