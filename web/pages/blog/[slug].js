@@ -25,34 +25,27 @@ const ptComponents = {
 };
 
 const Post = ({ post }) => {
-  const {
-    title = "Missing title",
-    name = "Missing name",
-    categories,
-    authorImage,
-    body = [],
-  } = post;
   return (
     <article>
-      <h1>{title}</h1>
-      <span>By {name}</span>
-      {categories && (
+      <h1>{post?.title ?? "Missing Title"}</h1>
+      <span>By {post?.name ?? "Missing name"}</span>
+      {post?.categories && (
         <ul>
           Posted in
-          {categories.map((category) => (
+          {post?.categories.map((category) => (
             <li key={category}>{category}</li>
           ))}
         </ul>
       )}
-      {authorImage && (
+      {post?.authorImage && (
         <div>
           <img
-            src={urlFor(authorImage).width(50).url()}
+            src={urlFor(post?.authorImage).width(50).url()}
             alt={`${name}'s picture`}
           />
         </div>
       )}
-      <PortableText value={body} components={ptComponents} />
+      <PortableText value={post?.body} components={ptComponents} />
     </article>
   );
 };
