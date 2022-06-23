@@ -24,9 +24,7 @@ const ptComponents = {
   },
 };
 
-const Post = ({
-  post = { title: "", name: "", categories: "", authorImage: "", body: [] },
-}) => {
+const Post = ({ post }) => {
   const {
     title = "Missing title",
     name = "Missing name",
@@ -73,7 +71,7 @@ export async function getStaticPaths() {
 
   return {
     paths: paths.map((slug) => ({ params: { slug } })),
-    fallback: "blocking",
+    fallback: true,
   };
 }
 
@@ -82,8 +80,7 @@ export async function getStaticProps(context) {
   const { slug = "" } = context.params;
   const post = await client.fetch(query, { slug });
   return {
-    notFound: true,
-    revalidate: 10,
+    revalidate: 60,
     props: {
       post,
     },

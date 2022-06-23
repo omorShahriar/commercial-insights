@@ -27,6 +27,7 @@ export async function getStaticProps() {
       *[_type == "post" && publishedAt < now()] | order(publishedAt desc)
     `);
   return {
+    revalidate: 10,
     props: {
       posts,
     },
