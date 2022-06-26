@@ -3,26 +3,7 @@ import HeroImage from "components/HeroImage";
 import Section from "components/Section";
 import Head from "next/head";
 import Image from "next/image";
-import YouTube from "react-youtube";
-
-const EmbeddedVideo = ({ videoId }) => {
-  const opts = {
-    height: "390",
-    width: "640",
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 0,
-    },
-  };
-  return (
-    <YouTube
-      className="mx-auto"
-      videoId={videoId}
-      opts={opts}
-      onReady={(e) => e.target.pauseVideo()}
-    />
-  );
-};
+import EmbeddedVideo from "components/EmbeddedVideo";
 
 const Screen = () => {
   return (

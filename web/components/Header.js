@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import brandLogo from "/public/brand-logo.png";
+import BusinessStreamsPopover from "./BusinessStreamsPopovers";
 
 function Header() {
   return (
-    <header className=" md:mx-16 xl:mx-64 py-2 ">
+    <header className=" md:mx-16 xl:mx-64 py-6 ">
       <nav className=" flex justify-between ">
         <div className=" ">
           <Link href="/">
@@ -29,10 +30,8 @@ function Header() {
               <a>About</a>
             </Link>
           </li>
-          <li className="hover:text-ci-aqua-0 duration-300 transition-all ">
-            <Link href="/#">
-              <a>Business Streams</a>
-            </Link>
+          <li className="">
+            <BusinessStreamsPopover />
           </li>
           <li className="hover:text-ci-aqua-0 duration-300 transition-all ">
             <Link href="/faq">
